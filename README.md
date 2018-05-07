@@ -48,7 +48,7 @@ var fill = d3.scale.ordinal().range(["#D41C75", "#A9650B", "#7BB215"]); //Παρ
 
 * Προσέθεσα μία ακόμη ομαδοποίηση δεδομένων.
   Αρχικά, το κουμπί για τη μετάβαση από την αρχική σελίδα στον καινούργιο τρόπο ομαδοποίησης.
-```HTML
+```
  <li><a href="#" role="button" class="pure-button switch" id="group-by-donation-amount">Split by the amount of the donation</a>
  </li> 
 ```
@@ -149,7 +149,7 @@ var infoPic = document.createElement("img");
 ```
 
 * Στο φάκελο *participants* τροποποίησα το αρχείο *index.html*, στην θέση *position #015*, χρησιμοποιώντας το ακόλουθο block κώδικα, με σκοπό την εμφάνιση των στοιχείων μου(github username & picture):
-```HTML
+```
 <div style="border: 2px solid; border-radius: 5px; background-color: #4267B2; width: fit-content; float: left; margin: 10px 10px 10px 10px;">
       <h4>
         <span>&nbsp;</span>
