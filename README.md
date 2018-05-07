@@ -157,7 +157,9 @@ var infoPic = document.createElement("img");
         <span class="ml1"><span class="letters">&nbsp;p15syme&nbsp;</span></span>
       </h4>
   </div>
+  ```
   
+  ```
   <script>
   // Wrap every letter in a span
   $('.ml1 .letters').each(function(){
