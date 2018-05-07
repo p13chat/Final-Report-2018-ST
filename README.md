@@ -22,7 +22,7 @@
 ## Εισαγωγή:
   
   
-## Παραδοτέο 1: Αρχικό έργο και ενδιάμεση αναφορά προόδου - 14 Μαρτίου (25%)
+### Παραδοτέο 1: Αρχικό έργο και ενδιάμεση αναφορά προόδου - 14 Μαρτίου (25%)
 
 Υλοποιήθηκαν οι ακόλουθες ενέργειες, ώστε να ικανοποιήθουν τα ζητούμενα του Παραδοτέου 1:
 
@@ -34,27 +34,27 @@
   bs.src = "Click.mp3";
 </script>
 ```
-
+###### Παραδοτέο 1 - Προσθήκη ήχου στα κουμπιά.
 * Χρησιμοποιώντας τα rgba και των HEX κώδικα, άλλαξα τα χρώματα από τις μπάλες. 
 ```Javascript
 var fill = d3.scale.ordinal().range(["#F02233", "#087FBD", "#FDBB30"]); //Default
 var fill = d3.scale.ordinal().range(["#D41C75", "#A9650B", "#7BB215"]); //Παραδοτέο 1
 ```
-
+###### Παραδοτέο 1 - Αλλαγή χρωμάτων στα bubbles.
 * Χρησιμοποιώντας τη συνάρτηση SpeechSynthesisUtterance(), εντός της συνάρτησης mouseover(), στον κώδικα του αρχείου chart.js, προσέθεσα την φωνή που θα ακούγεται για να λέει το όνομα και το ποσό του δωρήτη.
 Χρησιμοποιώντας το κομμάτι του κώδικα που προσέθεσα στο αρχείο index.html, κάνω zoom στα texts της ιστοσελίδας, τοποθετώντας το class=zoom εντός των κεφαλιδών των texts.
 ```Javascript
 	var voice = new SpeechSynthesisUtterance("Donators name is " + donor + " and the donation amount is " + amount + " pounds");
 	window.speechSynthesis.speak(voice);
 ```
-
+###### Παραδοτέο 1 - Όταν ο κέρσορας αγγίζει κάποιο bubble, ακούγεται το μήνυμα: Donators name is # and the donation amount is # pounds
 * Προσέθεσα μία ακόμη ομαδοποίηση δεδομένων.
   Αρχικά, το κουμπί για τη μετάβαση από την αρχική σελίδα στον καινούργιο τρόπο ομαδοποίησης.
 ```
  <li><a href="#" role="button" class="pure-button switch" id="group-by-donation-amount">Split by the amount of the donation</a>
  </li> 
 ```
-
+###### Παραδοτέο 1 - Κουμπί για το νέο τρόπο ομαδοποίησης.
 Έπειτα, ο κώδικας σε Javascript, όπου εισάγει το γράφημα:
 
   ```Javascript
@@ -126,16 +126,38 @@ function moveToDonations(alpha) {
     left: -70px;
 }
 ```
+###### Παραδοτέο 1 - Δημιουργία και οπτικοποίηση του νέου τρόπου ομαδοποίησης.
 
 * Εντός της συνάρτησης `start()` του αρχείου chart.js προσθέτοντας το `.on("click", function(d) { window.open("http://www.google.com/search?q=" + d.donor);});`, κάνοντας κλικ πάνω σε κάποια μπάλα ο χρήστης θα κάνει αναζήτηση σε καινούργιο παράθυρο.
 
+* Μέσω του παρακάτω κώδικα, γίνεται η μεγένθυση των λέξεων, όπως ζητήθηκε,
+
+```HTML
+.zoom:hover {
+    -moz-transform: scale(2.0);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(2.0);
+    transform: scale(1.5);
+    -ms-transform: scale(2.0);
+    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=2, M12=-0, M21=0, M22=2);
+}
+```
+το οποίο για να χρησιμοποιηθεί και να εφαρμοστεί στην σελίδα, έγινε η προσθήκη του κομματιού `class=zoom` σε σημεία που χρειάζεται για να ικανοποιηθεί το ζητούμενο, όπως στο παράδειγμα:
+
+```HTML
+<li><a href="#" role="button" class="pure-button switch" id="all-donations">All money</a>
+            </li>
+```
+
 * Τέλος, για το δεύτερο σκέλος σύμφωνα με τις οδηγίες δέσμευσα και έστειλα 5 φωτογραφίες από δωρητές στους οποίους δεν υπήρχαν και δημιούργησα ένα αρχείο 2015178.csv με τα στοιχεία μου.
 
-### Ενδεικτικά Στιγμιότυπα:
+#### Ενδεικτικά Στιγμιότυπα:
 ![ss1](https://user-images.githubusercontent.com/22681573/36947454-9c079868-1fd4-11e8-900c-df936ad26dd7.png)
+###### Παραδοτέο 1 - Μεγέθυνση των γραμμάτων.
 ![ss2](https://user-images.githubusercontent.com/22681573/36947455-9d7662c4-1fd4-11e8-9b3d-8409cda8c857.png)
+###### Παραδοτέο 1 - Νέος Τρόπος Ομαδοποίησης.
 
-## Παραδοτέο 2: Τελικό έργο και τελική αναφορά (25%), 9 Μαΐου
+### Παραδοτέο 2: Τελικό έργο και τελική αναφορά (25%), 9 Μαΐου
 
   Για το Παραδοτέο 2 έγιναν οι εξής αλλαγές:
   
@@ -149,6 +171,7 @@ var infoPic = document.createElement("img");
     document.getElementById("cssPic").insertBefore(infoPic,document.getElementById("cssPic").firstChild);
     infoPic.src = imageFile;
 ```
+###### Παραδοτέο 2 - Εμφάνιση του ιστορικού
 
 * Στο φάκελο *participants* τροποποίησα το αρχείο *index.html*, στην θέση *position #015*, χρησιμοποιώντας το ακόλουθο block κώδικα, με σκοπό την εμφάνιση των στοιχείων μου(github username & picture):
 
@@ -186,20 +209,30 @@ var infoPic = document.createElement("img");
   });    
   </script>
 ```
-
+###### Παραδοτέο 2 - Εμφάνιση του ονόματος και του avatar στο αρχείο index.html
 * Στο τελευταίο ζητούμενο που έκανα για το Παραδοτέο 2, ζητούσε να δημιουργήσουμε μία σελίδα, όπου θα αντλούσε στοιχεία δυναμικά από το κεντρικό αποθετήριο του ioniodi, μέσω της σελίδας Insights. Έτσι, δημιούργησα το αρχείο 2015178.html. Η άντληση των δεδομένων έγινε μέσω XML HTTP Request.
 
-### Ενδεικτικά Στιγμιότυπα Παραδοτέου 2:
+#### Ενδεικτικά Στιγμιότυπα Παραδοτέου 2:
 
 ![ss3](https://user-images.githubusercontent.com/22681573/39723986-236abab2-5250-11e8-9964-7880b1afc77f.png)
+###### Παραδοτέο 2 - Εμφάνιση του ιστορικού.
 
 ![ss4](https://user-images.githubusercontent.com/22681573/39724154-a397d4d6-5250-11e8-9a30-4076c76eed12.png)
+###### Παραδοτέο 2 - Η σελίδα στην οποία φαίνονται τα contributions από τους χρήστες του κεντρικού απεθετηρίου.
 
 ![ss5](https://user-images.githubusercontent.com/22681573/39724156-a3c569b4-5250-11e8-8990-3f3b4229c207.png)
+###### Παραδοτέο 2 - Εμφάνιση του ιστορικού.
 
 ## Μέθοδοι - Τεχνικές: 
 
+  Για τη περίπτωση των ζητουμένων και των δύο παραδοτέων, χρησιμοποιήθηκε το *Sublime Text Editor*, με το οποίο επεξεργάστηκα τους κώδικους των αρχείων *index.html, chart.js, style.css* και δοκιμάζονταν τοπικά, αλλά και μέσω του GitHub. Έπειτα, χρησιμοποίησα και τα εργάλεια για προγραμματιστές που διαθέτει το Mozilla Firefox, για να βλέπω αν ο κώδικας μου τρέχει σωστά.
   
+## Εργαλεία:
+
+  Για την ολοκλήρωση των ζητουμένων από τα δύο παραδοτέαμ χρησιμοποίησα τα ακόλουθα εργαλεία:
+  * Την εφαρμογή *Ζωγραφική*.
+  * Το GIMP.
+  * Sublime Text Editor.
 
 ## Συμπεράσματα:
 
@@ -212,3 +245,5 @@ var infoPic = document.createElement("img");
 ##### [XML HTTP Request (1)](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 
 ##### [XML HTTP Request (2)](https://www.w3schools.com/xml/ajax_applications.asp)
+
+##### [Display Image in Javascript](https://stackoverflow.com/questions/5451445/how-to-display-image-with-javascript)
