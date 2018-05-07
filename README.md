@@ -135,3 +135,51 @@ function moveToDonations(alpha) {
 
 ## Παραδοτέο 2: Τελικό έργο και τελική αναφορά (25%), 9 Μαΐου
 
+  Για το Παραδοτέο 2 έγιναν οι εξής αλλαγές:
+  
+* Τροποποιήθηκε ο κώδικας του αρχείου *chart.js*, προσθέτωντας το παρακάτω block κώδικα, με αποτέλεσμα την εμφάνιση της εικόνας του δωρητή, όταν ο χρήστης κάνει hove over από το bubble που τον αντιπροσωπεύει:
+```Javascript
+var infoPic = document.createElement("img");
+    infoPic.setAttribute("src","http://www.bizreport.com/2011/02/03/android-logo-200x200.jpg");
+    infoPic.setAttribute("height","42");
+    infoPic.setAttribute("width","42");
+    infoPic.setAttribute("onerror",'this.src=\"https://github.com/favicon.ico\";');
+    document.getElementById("cssPic").insertBefore(infoPic,document.getElementById("cssPic").firstChild);
+    infoPic.src = imageFile;
+```
+
+* Στο φάκελο *participants* τροποποίησα το αρχείο *index.html*, στην θέση *position #015*, χρησιμοποιώντας το ακόλουθο block κώδικα, με σκοπό την εμφάνιση των στοιχείων μου(github username & picture):
+```HTML
+<div style="border: 2px solid; border-radius: 5px; background-color: #4267B2; width: fit-content; float: left; margin: 10px 10px 10px 10px;">
+      <h4>
+        <span>&nbsp;</span>
+        <img src="https://avatars2.githubusercontent.com/u/22681573?s=400&v=4" height="42" width="42">  
+        <span class="ml1"><span class="letters">&nbsp;p15syme&nbsp;</span></span>
+      </h4>
+  </div>
+  
+  <script>
+  // Wrap every letter in a span
+  $('.ml1 .letters').each(function(){
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+  });
+   
+   anime.timeline({loop: true}) 
+    .add({
+    targets: '.ml1 .letters',
+    scale: [0,1],
+    opacity: [0,1],
+    easing: "easeOutElastic",
+    duration: 2000,
+    delay: function(el, i, l) {
+      return 750 * (i+2);
+    }
+  }).add({
+    targets: '.ml1',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeInOutQuint",
+    delay: 1000
+  });    
+  </script>
+```
