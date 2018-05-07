@@ -19,6 +19,7 @@
 
   Η παρούσα εργασίας αποτελεί επέκταση του [αποθετηρίου](https://ioniodi.github.io/D3js-uk-political-donations/full-viz.html), στην οποία χρησιμοποιώντας HTML, CSS και Javascript γίνεται οπτικοποίηση δεδομένων. Σκοπός είναι να τροποποίηση του δοσμένου παραδείγματος, έτσι ώστε να συμμορφωθεί με τα ζητούμενα των παραδοτέων που μας δίνονται. Έτσι, κάνοντας fork το αποθετήριο του ioniodi, το μετατρέπουμε στο προσωπικό μας αποθετήριο, σύμφωνα με τις οδηγίες. 
   
+  
 ## Παραδοτέο 1: Αρχικό έργο και ενδιάμεση αναφορά προόδου - 14 Μαρτίου (25%)
 
 Υλοποιήθηκαν οι ακόλουθες ενέργειες, ώστε να ικανοποιήθουν τα ζητούμενα του Παραδοτέου 1:
@@ -31,24 +32,29 @@
   bs.src = "Click.mp3";
 </script>
 ```
+
 * Χρησιμοποιώντας τα rgba και των HEX κώδικα, άλλαξα τα χρώματα από τις μπάλες. 
 ```Javascript
 var fill = d3.scale.ordinal().range(["#F02233", "#087FBD", "#FDBB30"]); //Default
 var fill = d3.scale.ordinal().range(["#D41C75", "#A9650B", "#7BB215"]); //Παραδοτέο 1
 ```
+
 * Χρησιμοποιώντας τη συνάρτηση SpeechSynthesisUtterance(), εντός της συνάρτησης mouseover(), στον κώδικα του αρχείου chart.js, προσέθεσα την φωνή που θα ακούγεται για να λέει το όνομα και το ποσό του δωρήτη.
 Χρησιμοποιώντας το κομμάτι του κώδικα που προσέθεσα στο αρχείο index.html, κάνω zoom στα texts της ιστοσελίδας, τοποθετώντας το class=zoom εντός των κεφαλιδών των texts.
 ```Javascript
 	var voice = new SpeechSynthesisUtterance("Donators name is " + donor + " and the donation amount is " + amount + " pounds");
 	window.speechSynthesis.speak(voice);
 ```
+
 * Προσέθεσα μία ακόμη ομαδοποίηση δεδομένων.
   Αρχικά, το κουμπί για τη μετάβαση από την αρχική σελίδα στον καινούργιο τρόπο ομαδοποίησης.
 ```HTML
  <li><a href="#" role="button" class="pure-button switch" id="group-by-donation-amount">Split by the amount of the donation</a>
  </li> 
 ```
-  Έπειτα, ο κώδικας σε Javascript, όπου εισάγει το γράφημα:
+
+Έπειτα, ο κώδικας σε Javascript, όπου εισάγει το γράφημα:
+
   ```Javascript
   	if (name === "group-by-donation-amount")
 		$("#initial-content").fadeOut(250);
@@ -90,6 +96,7 @@ function moveToDonations(alpha) {
 	};
 }
 ```
+
 Και ο κώδικας σε CSS:
 ```CSS
 #view-donation-amount {
@@ -117,7 +124,9 @@ function moveToDonations(alpha) {
     left: -70px;
 }
 ```
+
 * Εντός της συνάρτησης `start()` του αρχείου chart.js προσθέτοντας το `.on("click", function(d) { window.open("http://www.google.com/search?q=" + d.donor);});`, κάνοντας κλικ πάνω σε κάποια μπάλα ο χρήστης θα κάνει αναζήτηση σε καινούργιο παράθυρο.
+
 * Τέλος, για το δεύτερο σκέλος σύμφωνα με τις οδηγίες δέσμευσα και έστειλα 5 φωτογραφίες από δωρητές στους οποίους δεν υπήρχαν και δημιούργησα ένα αρχείο 2015178.csv με τα στοιχεία μου.
 
 ### Ενδεικτικά Στιγμιότυπα:
