@@ -50,10 +50,12 @@ var fill = d3.scale.ordinal().range(["#D41C75", "#A9650B", "#7BB215"]); //Παρ
 ###### Παραδοτέο 1 - Όταν ο κέρσορας αγγίζει κάποιο bubble, ακούγεται το μήνυμα: Donators name is # and the donation amount is # pounds
 * Προσέθεσα μία ακόμη ομαδοποίηση δεδομένων.
   Αρχικά, το κουμπί για τη μετάβαση από την αρχική σελίδα στον καινούργιο τρόπο ομαδοποίησης.
+  
 ```
  <li><a href="#" role="button" class="pure-button switch" id="group-by-donation-amount">Split by the amount of the donation</a>
  </li> 
 ```
+
 ###### Παραδοτέο 1 - Κουμπί για το νέο τρόπο ομαδοποίησης.
 Έπειτα, ο κώδικας σε Javascript, όπου εισάγει το γράφημα:
 
