@@ -149,11 +149,12 @@ var infoPic = document.createElement("img");
 ```
 
 * Στο φάκελο *participants* τροποποίησα το αρχείο *index.html*, στην θέση *position #015*, χρησιμοποιώντας το ακόλουθο block κώδικα, με σκοπό την εμφάνιση των στοιχείων μου(github username & picture):
+
 ```
 <div style="border: 2px solid; border-radius: 5px; background-color: #4267B2; width: fit-content; float: left; margin: 10px 10px 10px 10px;">
       <h4>
         <span>&nbsp;</span>
-        **<img src="https://avatars2.githubusercontent.com/u/22681573?s=400&v=4" height="42" width="42">**
+        <img src="https://avatars2.githubusercontent.com/u/22681573?s=400&v=4" height="42" width="42">
         <span class="ml1"><span class="letters">&nbsp;p15syme&nbsp;</span></span>
       </h4>
   </div>
@@ -185,3 +186,13 @@ var infoPic = document.createElement("img");
 ```
 
 * Στο τελευταίο ζητούμενο που έκανα για το Παραδοτέο 2, ζητούσε να δημιουργήσουμε μία σελίδα, όπου θα αντλούσε στοιχεία δυναμικά από το κεντρικό αποθετήριο του ioniodi, μέσω της σελίδας Insights. Έτσι, δημιούργησα το αρχείο 2015178.html. Η άντληση των δεδομένων έγινε μέσω XML HTTP Request.
+
+### Ενδεικτικά Στιγμιότυπα Παραδοτέου 2:
+
+![ss3](https://user-images.githubusercontent.com/22681573/39723986-236abab2-5250-11e8-9964-7880b1afc77f.png)
+
+![ss4](https://user-images.githubusercontent.com/22681573/39724154-a397d4d6-5250-11e8-9a30-4076c76eed12.png)
+
+![ss5](https://user-images.githubusercontent.com/22681573/39724156-a3c569b4-5250-11e8-8990-3f3b4229c207.png)
+
+
