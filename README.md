@@ -21,16 +21,10 @@
   
 ## Παραδοτέο 1: Αρχικό έργο και ενδιάμεση αναφορά προόδου - 14 Μαρτίου (25%)
 
-υλοποιήθηκαν οι ακόλουθες ενέργειες, ώστε να ικανοποιήθουν τα ζητούμενα του Παραδοτέου 1:
+Υλοποιήθηκαν οι ακόλουθες ενέργειες, ώστε να ικανοποιήθουν τα ζητούμενα του Παραδοτέου 1:
 
 * Αρχικά, τροποποίησα το URL του προσωπικού μου αποθετηρίου από https://github.com/p15syme/D3js-uk-political-donations/full-viz.html --> https://github.com/p15syme/D3js-uk-political-donations, διαγράφοντας την κατάληξη full_viz.html και αλλάζοντας την ονομασία του αρχείου full_viz.html --> index.html.
-* Προσέθεσα των ήχο όταν κάνει κάποιος click στα κουμπιά, μέσω της συνάρτησης onmousedown() στη κεφαλίδα του `<ul></ul>` .
-```HTML
-<ul onmousedown="bs.play()"> 
-...
-</ul>
-```
-
+* Προσέθεσα των ήχο όταν κάνει κάποιος click στα κουμπιά, μέσω της συνάρτησης onmousedown() στη κεφαλίδα του `<ul onmousedown="bs.play()"> </ul>` .
 ```HTML
 <script>
   var bs = new Audio();
@@ -48,3 +42,87 @@ var fill = d3.scale.ordinal().range(["#D41C75", "#A9650B", "#7BB215"]); //Παρ
 	var voice = new SpeechSynthesisUtterance("Donators name is " + donor + " and the donation amount is " + amount + " pounds");
 	window.speechSynthesis.speak(voice);
 ```
+* Προσέθεσα μία ακόμη ομαδοποίηση δεδομένων.
+  Αρχικά, το κουμπί για τη μετάβαση από την αρχική σελίδα στον καινούργιο τρόπο ομαδοποίησης.
+```HTML
+ <li><a href="#" role="button" class="pure-button switch" id="group-by-donation-amount">Split by the amount of the donation</a>
+ </li> 
+```
+  Έπειτα, ο κώδικας σε Javascript, όπου εισάγει το γράφημα:
+  ```Javascript
+  	if (name === "group-by-donation-amount")
+		$("#initial-content").fadeOut(250);
+		$("#value-scale").fadeOut(250);
+		$("#view-donor-type").fadeOut(250);
+		$("#view-party-type").fadeOut(250);
+		$("#view-source-type").fadeOut(250);
+		$("#view-donation-amount").fadeIn(1000);
+		return donationType();
+```
+```Javascript
+function moveToDonations(alpha) {
+	return function(d) {
+			var centreX;
+			var centreY;
+		if (d.value >= 10000000) {
+			centreY = 300;
+			centreX = 200;
+				
+		} else if (d.value < 10000000 && d.value>= 1000000) {
+				centreY = 450;
+				centreX = 700;
+				
+		} else if (d.value < 1000000 && d.value >= 500000) {
+				centreY = 600;
+				centreX = 200;
+				
+		} else  if (d.value < 500000 && d.value >= 100000) {
+				centreY = 700;
+				centreX = 750;
+				
+		} else  if (d.value <= maxVal) {
+				centreY = 800;
+				centreX = 200;
+		}
+
+		d.x += (centreX - d.x) * (brake + 0.06) * alpha * 1.2;
+		d.y += (centreY - 100 - d.y) * (brake + 0.06) * alpha * 1.2;
+	};
+}
+```
+Και ο κώδικας σε CSS:
+```CSS
+#view-donation-amount {
+    height: 100%;
+    left: 450px;
+    width: 370px;
+}
+#first {
+    top: 50px;
+}
+#second{
+    top: 150px;
+    left: 10px;
+}
+#third {
+    top: 335px;
+    left: -80px;
+}
+#fourth {
+    top: 480px;
+    right: -80px;
+}
+#last {
+    top: 650px;
+    left: -70px;
+}
+```
+* Εντός της συνάρτησης `start()` του αρχείου chart.js προσθέτοντας το `.on("click", function(d) { window.open("http://www.google.com/search?q=" + d.donor);});`, κάνοντας κλικ πάνω σε κάποια μπάλα ο χρήστης θα κάνει αναζήτηση σε καινούργιο παράθυρο.
+* Τέλος, για το δεύτερο σκέλος σύμφωνα με τις οδηγίες δέσμευσα και έστειλα 5 φωτογραφίες από δωρητές στους οποίους δεν υπήρχαν και δημιούργησα ένα αρχείο 2015178.csv με τα στοιχεία μου.
+
+### Ενδεικτικά Στιγμιότυπα:
+![ss1](https://user-images.githubusercontent.com/22681573/36947454-9c079868-1fd4-11e8-900c-df936ad26dd7.png)
+![ss2](https://user-images.githubusercontent.com/22681573/36947455-9d7662c4-1fd4-11e8-9b3d-8409cda8c857.png)
+
+## Παραδοτέο 2: Τελικό έργο και τελική αναφορά (25%), 9 Μαΐου
+
