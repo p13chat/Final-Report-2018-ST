@@ -153,13 +153,11 @@ var infoPic = document.createElement("img");
 <div style="border: 2px solid; border-radius: 5px; background-color: #4267B2; width: fit-content; float: left; margin: 10px 10px 10px 10px;">
       <h4>
         <span>&nbsp;</span>
-        <img src="https://avatars2.githubusercontent.com/u/22681573?s=400&v=4" height="42" width="42">  
+        **<img src="https://avatars2.githubusercontent.com/u/22681573?s=400&v=4" height="42" width="42">**
         <span class="ml1"><span class="letters">&nbsp;p15syme&nbsp;</span></span>
       </h4>
   </div>
-  ```
   
-  ```
   <script>
   // Wrap every letter in a span
   $('.ml1 .letters').each(function(){
