@@ -233,6 +233,7 @@ var infoPic = document.createElement("img");
   * Την εφαρμογή *Ζωγραφική*.
   * Το GIMP.
   * Sublime Text Editor.
+  * ScreenToGif
 
 ## Συμπεράσματα:
 
