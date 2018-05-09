@@ -15,6 +15,8 @@
 
 #### [Link Παραδοτέου 2](https://github.com/p15syme/D3js-uk-political-donations/tree/2015178---%CE%A0%CE%B1%CF%81%CE%B1%CE%B4%CE%BF%CF%84%CE%AD%CE%BF-2)
 
+#### [Link Εκτελέσιμου Παραδείγματος για το index.html (Avatar + Username)](https://p15syme.github.io/D3js-uk-political-donations/participants/index.html)
+
 ## Σύνοψη:
 
   Η παρούσα εργασίας αποτελεί επέκταση του [αποθετηρίου](https://ioniodi.github.io/D3js-uk-political-donations/full-viz.html), στην οποία χρησιμοποιώντας HTML, CSS και Javascript γίνεται οπτικοποίηση δεδομένων. Σκοπός είναι να τροποποίηση του δοσμένου παραδείγματος, έτσι ώστε να συμμορφωθεί με τα ζητούμενα των παραδοτέων που μας δίνονται. Έτσι, κάνοντας fork το αποθετήριο του ioniodi, το μετατρέπουμε στο προσωπικό μας αποθετήριο, σύμφωνα με τις οδηγίες. 
@@ -167,7 +169,7 @@ var infoPic = document.createElement("img");
 ```
 ###### Παραδοτέο 2 - Εμφάνιση του ιστορικού
 
-* Στο φάκελο *participants* τροποποίησα το αρχείο *index.html*, στην θέση *position #015*, χρησιμοποιώντας το ακόλουθο block κώδικα, με σκοπό την εμφάνιση των στοιχείων μου(github username & picture):
+* Στο φάκελο *participants* τροποποίησα το αρχείο *index.html*, στην θέση *position #015*, χρησιμοποιώντας το ακόλουθο block κώδικα, με σκοπό την εμφάνιση των στοιχείων μου(github username & picture). Όσον αναφορά το συγκεκριμένο ερώτημα, στο κεντρικο αποθετήριο παρουσιάζεται με λάθος μορφή από'τι στο αρχείο του προσωπικού μου αποθετηρίου, χωρίς να έχω βρει τον τρόπο να το φτιάξω:
 
 ```
 <div style="border: 2px solid; border-radius: 5px; background-color: #4267B2; width: fit-content; float: left; margin: 10px 10px 10px 10px;">
@@ -203,6 +205,7 @@ var infoPic = document.createElement("img");
   });    
   </script>
 ```
+* https://p15syme.github.io/D3js-uk-political-donations/participants/index.html To link στο εκτελέσιμο παράδειγμα του προσωπικού μουθ παραδείγματος.
 ###### Παραδοτέο 2 - Εμφάνιση του ονόματος και του avatar στο αρχείο index.html
 * Στο τελευταίο ζητούμενο που έκανα για το Παραδοτέο 2, ζητούσε να δημιουργήσουμε μία σελίδα, όπου θα αντλούσε στοιχεία δυναμικά από το κεντρικό αποθετήριο του ioniodi, μέσω της σελίδας Insights. Έτσι, δημιούργησα το αρχείο 2015178.html. Η άντληση των δεδομένων έγινε μέσω XML HTTP Request.
 
